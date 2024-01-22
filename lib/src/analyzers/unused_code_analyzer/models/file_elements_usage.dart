@@ -13,6 +13,9 @@ class FileElementsUsage {
 
   final Map<Set<String>, Set<Element>> conditionalElements = {};
 
+  /// The map of referenced prefix elements and the elements that they prefix.
+  final Map<PrefixElement, List<Element>> prefixMap = {};
+
   void merge(FileElementsUsage other) {
     elements.addAll(other.elements);
     usedExtensions.addAll(other.usedExtensions);
